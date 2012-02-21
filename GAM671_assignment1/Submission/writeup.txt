@@ -1,0 +1,21 @@
+Evaluation function.
+
+
+The function prototype was changed, so that it can hold MoveLists for p1 and p2.
+They are not changed by the way, just needed for some data.
+Function consists of 2 if statements for 2 players. The basic logic is that
+mobility of a player should be considered first + all the empty adjacent fields 
+around opponents frotier pieces + possible corner moves for a player.
+
+
+CreateTree(int board[][NUMSQUARES],int lvl) function is not changed as much as Eval.
+The only difference is that I let it to build the tree as far left down as possible,
+ant when recursive function gets up on the stack, on each level it compares existing 
+node to a new possible node. If this new node is better, than previous node gets nulled
+and new node is created.
+
+This logic works for both players.
+
+By the way, the tree height is 7.
+
+Artur Shinkevich
